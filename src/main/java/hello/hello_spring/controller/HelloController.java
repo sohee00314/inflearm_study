@@ -34,7 +34,7 @@ public class HelloController {
         hello.setName(name);
         return hello;
     }
-    static class Hello{
+    public static class Hello{
         private String name;
         //java 빈 표준 방식(private은 접근할 수 있도록 하는 것)
         public String getName() {
