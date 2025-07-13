@@ -7,7 +7,6 @@ import java.util.*;
 /**
  * 회원 관리 기능을 구현한 클래스
  * */
-@Repository
 public class MemoryMemberRepository implements MemberRepository {
     private final static Map<Long, Member> store = new HashMap<>();//회원저보를 저장할 곳
     private static long sequence = 0L;//회원 ID가 될 변수
