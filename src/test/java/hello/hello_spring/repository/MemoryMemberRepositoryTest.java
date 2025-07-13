@@ -28,7 +28,7 @@ class MemoryMemberRepositoryTest {
     public void save(){
         Member member = new Member();
         member.setName("testName");
-        repository.save(member);
+        member = repository.save(member);
         Member result = repository.findById(member.getId()).get();
         //member가 result가 같은지 비교
         assertThat(member).isEqualTo(result);
