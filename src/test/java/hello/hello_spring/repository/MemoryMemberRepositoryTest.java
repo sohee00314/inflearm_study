@@ -40,11 +40,11 @@ class MemoryMemberRepositoryTest {
     public void findByName(){
         Member member1 = new Member();
         member1.setName("testName1");
-        repository.save(member1);
+        member1=repository.save(member1);
 
         Member member2 = new Member();
         member2.setName("testName2");
-        repository.save(member2);
+        member2=repository.save(member2);
 
         Member result = repository.findByName("testName1").get();
         assertThat(member1).isEqualTo(result);
@@ -56,11 +56,11 @@ class MemoryMemberRepositoryTest {
     public void findAll(){
         Member member1 = new Member();
         member1.setName("testName1");
-        repository.save(member1);
+        member1=repository.save(member1);
 
         Member member2 = new Member();
         member2.setName("testName2");
-        repository.save(member2);
+        member2=repository.save(member2);
 
         List<Member> result = repository.findAll();
         assertThat(result).hasSize(2);
